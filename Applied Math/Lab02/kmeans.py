@@ -80,8 +80,6 @@ if __name__ == '__main__':
     row = img_1d.shape[0]
     column = img_1d.shape[1]
     channel = img_1d.shape[2]
-    column = img_1d.shape[1]
-    channel = img_1d.shape[2]
     #init_centroids = 'in_pixels' OR init_centroids = 'random'
     new_centroid, new_img = kmeans(img_1d, k_clusters,init_centroids = 'in_pixels')
     print('new centroid = ', new_centroid)
@@ -89,6 +87,6 @@ if __name__ == '__main__':
     plt.imshow(new_img.astype('uint8'))
     plt.show()
 
-    img_1d = img_1d.reshape(img_1d.shape[0] * img_1d.shape[1], img_1d.shape[2])
-    test = KMeans(n_clusters = k_clusters, random_state=0).fit(img_1d)
-    print('sklearn centroid = ', test.cluster_centers_ )
+    #img_1d = img_1d.reshape(img_1d.shape[0] * img_1d.shape[1], img_1d.shape[2])
+    #test = KMeans(n_clusters = k_clusters, random_state=0).fit(img_1d)
+    #print('sklearn centroid = ', test.cluster_centers_ )
